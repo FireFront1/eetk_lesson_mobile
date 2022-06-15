@@ -2,9 +2,18 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    id("com.squareup.sqldelight")
+    id("org.jetbrains.kotlin.plugin.serialization") version ("1.6.10")
 }
 
 version = "1.0"
+
+sqldelight {
+    database("DatabaseOwner") {
+        packageName = "com.multiplatform.eetk_lesson"
+        schemaOutputDirectory = file("src/commonMain/sqldelight/")
+    }
+}
 
 kotlin {
     android()
@@ -52,6 +61,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
         val androidTest by getting

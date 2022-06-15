@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS Lessons(
+    teacher_info TEXT NOT NULL,
+    lesson_number INTEGER NOT NULL,
+    cab TEXT NOT NULL,
+    group_name TEXT NOT NULL,
+    name_lesson TEXT NOT NULL,
+    date TEXT NOT NULL
+);
+
+
+deleteAll:
+DELETE FROM Lessons;
+
+insertValueLesson:
+INSERT INTO Lessons(teacher_info, lesson_number, cab, group_name, name_lesson, date) VALUES(?, ?, ?, ?, ?, ?);
+
+selectAllLesson:
+SELECT * FROM Lessons;
