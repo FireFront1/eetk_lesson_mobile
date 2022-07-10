@@ -1,3 +1,3 @@
-package com.multiplatofrm.eetk_lesson.core
+package com.multiplatofrm.scooterapp.base
 
 interface UiEvent

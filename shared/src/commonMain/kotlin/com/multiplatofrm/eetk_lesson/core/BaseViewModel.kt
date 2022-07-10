@@ -1,6 +1,6 @@
-package com.multiplatofrm.eetk_lesson.core
+package com.multiplatofrm.scooterapp.base
 
-import com.multiplatofrm.eetk_lesson.presentation.executor.MainIoExecutor
+import com.multiplatofrm.scooterapp.presenter.executor.MainIoExecutor
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
